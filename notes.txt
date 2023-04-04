@@ -7,4 +7,99 @@ What is GitHub?
 GitHub is a Git repository hosting service that provides a web-based graphical interface (GUI). It helps every team member work together on a project from anywhere,
 making it easy to collaborate. 
 
+Commands :-
+
+	git init - Create an empty Git repository or reinitialize an existing one.This creates a new subdirectory named .Git , 
+		   that contains all of your necessary repository files — a Git repository skeleton. 
+	
+	git add  - The git add command is used to add file contents to the Index (Staging Area).This command updates the current content of the working tree to the staging area. 
+		   It also prepares the staged content for the next commit. 	
+
+			git add <File name>  
+
+	git status - The git status command is used to display the state of the repository and staging area. It allows us to see the tracked, untracked files and changes.
+			
+			git status		     	
+		
+	git commit - The commit command performs a commit, and the -m "message" adds a message.
+			
+			git commit -m "my 1st commit" filename
+			
+		     The Staging Environment has been committed to our repo, with the message:"my 1st commit"	
+
+	git log	   - To view the history of commits for a repository, you can use the log command.
+	
+			git log
+	
+	git config - Git allows you to set a global and per-project username and email address. You can set or change your git identity using the git config command. 
+	             Changes only affect future commits.
+
+			i) To set your global username/email configuration:
+
+				Set your username:
+				git config --global user.name "FIRST_NAME LAST_NAME"
+
+				Set your email address:
+				git config --global user.email "MY_NAME@example.com"
+
+			ii) To set repository-specific username/email configuration:
+
+				Set your username:
+				git config user.name "FIRST_NAME LAST_NAME"
+
+				Set your email address:
+				git config user.email "MY_NAME@example.com"
+
+			Verify your configuration by displaying your configuration file:
+			cat .git/config		
+
+	git clone  - The git clone command is used to create a copy of a specific repository or branch within a repository.
+	
+			git clone https://github.com/github/training-kit.git
+
+		     When you clone a repository, you don't get one file, like you may in other centralized version control systems. 
+		     By cloning with Git, you get the entire repository - all files, all branches, and all commits.
+
+	git remote - The git remote command lets you create, view, and delete connections to other repositories. The git remote command allows accessing the connection between remote and local. 
+			
+				git remote
+			
+			The given command is providing the remote name as the origin. Origin is the default name for the remote server, which is given by Git.
+
+		     i) git remote -v:
+
+		        Git remote supports a specific option -v to show the URLs that Git has stored as a short name. These short names are used during the reading and write operation.
+ 		        Here, -v stands for verbose.
+			origin https://github.com/ashutosh88/example1.git
+			
+		     ii) git remote add:
+			 
+			When we fetch a repository implicitly, git adds a remote for the repository. Also, we can explicitly add a remote for a repository. 
+			We can add a remote as a shot nickname or short name. To add remote as a short name, follow the below command:
+				git remote add <short name><remote URL>  
+		
+			you can now pull a repository using its short name instead of its remote URL. Now, the repository master branch can be accessed through a short name.
+
+		    iii) Git remove remote:
+
+			 You can remove a remote connection from a repository. To remove a connection, perform the git remote command with remove or rm option. 
+			 It can be done as:
+				
+				git remote rm <destination>  or git remote remove <destination>
+
+		    iv) git rename remote:
+
+			Git allows renaming the remote server name so that you can use a short name in place of the remote server name. Below command is used to rename the remote server:
+
+				git remote rename <old name><new name> 
+	
+	git pull -  The git pull command fetches and downloads content from the remote repository and integrates changes into the local repository.
+ 
+
+			git pull <remote branch URL>
+
+	git push -  The git push command uploads content from a local repository to a remote repository. Pushing refers to the process of moving commits from one repository to another.
+ 
+			git push origin master 
+			
 
